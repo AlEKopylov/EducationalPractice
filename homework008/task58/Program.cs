@@ -36,10 +36,8 @@ int[,] Multiplication(int[,] array1, int[,] array2)
                 result[i, j] += array1[i, k] * array2[k, j];
             }
         }
-
     }
     return result;
-
 }
 
 int Input(string output)
