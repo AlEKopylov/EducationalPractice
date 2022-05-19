@@ -6,11 +6,11 @@ int[,] arrayOfNumbers = new int[rows, columns];
 
 FillArray(rows, columns, arrayOfNumbers);
 WriteArray(rows, columns, arrayOfNumbers);
-int[] rowWithMinimalSum = FinRowWithMinSum(arrayOfNumbers);
+int[] rowWithMinimalSum = FindRowWithMinSum(arrayOfNumbers);
 Console.WriteLine("");
 Console.Write($"Минимальная сумма {rowWithMinimalSum[0]} найдена в строке {rowWithMinimalSum[1]+1}");
 
-int[] FinRowWithMinSum(int[,] array)
+int[] FindRowWithMinSum(int[,] array)
 {
     int[] result = new int[2];
     result[0] = 0;
@@ -24,9 +24,8 @@ int[] FinRowWithMinSum(int[,] array)
         }
         if (tempSum < result[0] | i == 0)
         {
-            result[0] = tempSum;
+            result[0] = tempSum; 
             result[1] = i;
-            tempSum = 0;
         }
         tempSum = 0;
     }
