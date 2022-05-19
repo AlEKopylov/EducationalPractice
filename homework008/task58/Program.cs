@@ -1,17 +1,17 @@
 ﻿// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
-int rows1 = Input("Введите количество строк в 1м массиве - ");
-int columns1 = Input("Введите количество столбцов в 1м массиве - ");
-int rows2 = Input("Введите количество строк в 2м массиве - ");
-int columns2 = Input("Введите количество столбцов в 2м массиве - ");
+int rows1 = Input("Введите количество строк в 1ой матрице- ");
+int columns1 = Input("Введите количество столбцов в 1ой матрице - ");
+int rows2 = Input("Введите количество строк в 2ой матрице - ");
+int columns2 = Input("Введите количество столбцов в 2ой матрице - ");
 
 int[,] matrix1 = new int[rows1, columns1];
 int[,] matrix2 = new int[rows2, columns2];
 
 FillArray(rows1, columns1, matrix1);
 FillArray(rows2, columns2, matrix2);
-Console.WriteLine("Матрица A:");
+Console.WriteLine("Матрица 1:");
 WriteArray(rows1, columns1, matrix1);
-Console.WriteLine("Матрица B:");
+Console.WriteLine("Матрица 2:");
 WriteArray(rows2, columns2, matrix2);
 
 if (matrix1.GetLength(1) != matrix2.GetLength(0))
@@ -19,8 +19,7 @@ if (matrix1.GetLength(1) != matrix2.GetLength(0))
         Console.WriteLine("Матрицы нельзя перемножить");
         return;
     }
-Console.WriteLine("Матрица C = A * B:");
-
+Console.WriteLine("Матрица 3 = Maтрица 1 * Матрица 2:");
 int[,] resultMatrix = Multiplication(matrix1, matrix2);
 WriteArray(rows1, columns2, resultMatrix);
 
