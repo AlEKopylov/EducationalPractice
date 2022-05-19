@@ -17,21 +17,21 @@ int Input(string output)
 }
 void FillArrayBy(int lenghtCube, int[,] array)
 {
-    int i = 0;
-    int j = 0;
+    int rows = 0;
+    int columns = 0;
     int temp = 1;
     while (temp <= lenghtCube * lenghtCube)
     {
-        array[i, j] = temp;
+        array[rows, columns] = temp;
         temp++;
-        if (i <= j + 1 && i + j < lenghtCube - 1)
-            j++;
-        else if (i < j && i + j >= lenghtCube - 1)
-            i++;
-        else if (i >= j && i + j > lenghtCube - 1)
-            j--;
+        if (rows <= columns + 1 && rows + columns < lenghtCube - 1)
+            columns++;
+        else if (rows < columns && rows + columns >= lenghtCube - 1)
+            rows++;
+        else if (rows >= columns && rows + columns > lenghtCube - 1)
+            columns--;
         else 
-            i--;
+            rows--;
     }
 }
 void WriteArray(int lenghtCube, int[,] array)
